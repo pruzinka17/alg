@@ -28,10 +28,8 @@ def _reverse_graph(graph):
             graph_prime[edge][node] = graph[node][edge]
     return graph_prime
 
-
 def _is_cycle(graph):
     for node in graph:
-        # DFS
         visited = list()
         stack = [node]
 
@@ -55,7 +53,7 @@ def _is_cycle(graph):
 
     return None
 
-
+# Získání prvního nodu z cesty
 def _get_first(Path, type) -> int:
     first = []
     if type == "value":
@@ -69,7 +67,7 @@ def _get_first(Path, type) -> int:
 
     return first[0] if first else None
 
-
+# Odstranení nodu které nejsou ve stromu
 def _prune(Graph, A, arbitrary_node_v_c, arbitrary_node_v_c_in_edges, arbitrary_node_v_c_out_edges):
     for node in list(A):
         if node == arbitrary_node_v_c:

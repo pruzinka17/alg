@@ -32,3 +32,7 @@ The Chu-Liu/Edmonds algorithm follows a specific series of steps to compute the 
 ## Conclusion
 
 The Chu-Liu/Edmonds algorithm remains a cornerstone technique for handling directed graphs in computational theory and practice. Its ability to efficiently determine minimum spanning arborescences makes it indispensable for network analysis and related fields.
+
+## Class Diagram
+
+<p style="text-align: center;">Ahoj ja jsem mirek</p>

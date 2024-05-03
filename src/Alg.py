@@ -6,7 +6,8 @@ class Alg:
     def __init__(self, root) -> None:
         self.root = root
 
-    def _construct_min_or_max_weighted_graph(self, graph):
+    # Postavení grafu
+    def _construct_weighted_graph(self, graph):
         graph_prime = {}
         rev = _reverse_graph(graph)
 
@@ -25,8 +26,9 @@ class Alg:
         graph_prime[self.root] = {}
         return graph_prime
 
+    # Algoritmus
     def execute(self, Graph):
-        pi = self._construct_min_or_max_weighted_graph(Graph)
+        pi = self._construct_weighted_graph(Graph)
         cycle = _is_cycle(pi)
         if not cycle:
             P = _reverse_graph(pi)
@@ -79,6 +81,7 @@ class Alg:
 
                     D_prime[u][v] = Graph[u][v]
 
+        # Rekurzivní hledání stroku od kořenu
         A = self.execute(D_prime)
 
         A_prime, incoming_node = _prune(
