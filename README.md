@@ -35,4 +35,9 @@ The Chu-Liu/Edmonds algorithm remains a cornerstone technique for handling direc
 
 ## Class Diagram
 
-<p style="text-align: center;">Ahoj ja jsem mirek</p>
+*-----------------------------------------*
+|                  Alg                    |
+|-----------------------------------------|
+|+ construct*weighted_graph(self, graph)  |
+|+ execute(self, Graph)                   |
+*-----------------------------------------*
